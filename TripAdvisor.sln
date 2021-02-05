@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripAdvisor", "TripAdvisor\TripAdvisor.csproj", "{ADB7345A-580F-47C7-9E01-4BBE43B9E387}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{0B79519D-1C84-4BBD-9E3B-CBEF05AD8755}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Front", "Front\Front.csproj", "{D0894BB9-4382-4591-B6A7-13C30019EA51}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ADB7345A-580F-47C7-9E01-4BBE43B9E387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ADB7345A-580F-47C7-9E01-4BBE43B9E387}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ADB7345A-580F-47C7-9E01-4BBE43B9E387}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ADB7345A-580F-47C7-9E01-4BBE43B9E387}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0B79519D-1C84-4BBD-9E3B-CBEF05AD8755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0B79519D-1C84-4BBD-9E3B-CBEF05AD8755}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B79519D-1C84-4BBD-9E3B-CBEF05AD8755}.Release|Any CPU.ActiveCfg = Release|Any CPU

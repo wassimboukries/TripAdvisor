@@ -21,3 +21,4 @@ Y:/ISIMA 2020-2021/Services web/TP/TripAdvisor/DAL/obj/Debug/netcoreapp3.1/DAL.c
 /Users/etienne/Projects/triplite/DAL/obj/Debug/netcoreapp3.1/DAL.dll
 /Users/etienne/Projects/triplite/DAL/obj/Debug/netcoreapp3.1/DAL.pdb
 /Users/etienne/Projects/triplite/DAL/obj/Debug/netcoreapp3.1/DAL.genruntimeconfig.cache
+/Users/etienne/Projects/triplite/DAL/obj/Debug/netcoreapp3.1/DAL.csprojAssemblyReference.cache
