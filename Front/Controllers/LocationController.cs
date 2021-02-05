@@ -6,7 +6,7 @@ using DAL.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace TripAdvisor.Controllers
+namespace Fro.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -23,7 +23,7 @@ namespace TripAdvisor.Controllers
         [HttpGet]
         public IEnumerable<Location> Get()
         {
-            return null;
+            return Enumerable.Range(1, 5).Select(index => new Location(3, "Marrakech")).ToArray();
         }
 
         [HttpGet("(id)")]

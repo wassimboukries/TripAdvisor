@@ -12,7 +12,10 @@ namespace TripAdvisor.Controllers
     [Route("[controller]")]
     public class OpinionController : ControllerBase
     {
-       
+        private static readonly string[] opnions = new[]
+        {
+            "Good", "Bad"
+        };
 
         private readonly ILogger<OpinionController> _logger;
 
@@ -24,7 +27,14 @@ namespace TripAdvisor.Controllers
         [HttpGet]
         public IEnumerable<Opinion> Get()
         {
-            return null;
+            var rng = new Random();
+            return Enumerable.Range(1, 2).Select(index => new Opinion
+            (
+                index,
+                " qdfsfg",
+                "qdsfgdfg"
+            ));
+
         }
     }
 }

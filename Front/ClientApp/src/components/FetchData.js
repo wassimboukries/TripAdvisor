@@ -8,8 +8,8 @@ export class FetchData extends Component {
     this.state = { forecasts: [], loading: true };
   }
 
-  componentDidMount() {
-    this.populateWeatherData();
+    componentDidMount() {
+        this.populateOpinionData();
   }
 
   static renderForecastsTable(forecasts) {
@@ -17,19 +17,15 @@ export class FetchData extends Component {
       <table className='table table-striped' aria-labelledby="tabelLabel">
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
+            <th>Id</th>
+            <th>Name</th>
           </tr>
         </thead>
         <tbody>
           {forecasts.map(forecast =>
-            <tr key={forecast.date}>
-              <td>{forecast.date}</td>
-              <td>{forecast.temperatureC}</td>
-              <td>{forecast.temperatureF}</td>
-              <td>{forecast.summary}</td>
+            <tr key={forecast.id}>
+              <td>{forecast.id}</td>
+              <td>{forecast.content}</td>
             </tr>
           )}
         </tbody>
@@ -56,4 +52,17 @@ export class FetchData extends Component {
     const data = await response.json();
     this.setState({ forecasts: data, loading: false });
   }
+
+    async populateLocationData() {
+        const response = await fetch('location');
+        console.log(response);
+        const data = await response.json();
+        this.setState({ forecasts: data, loading: false });
+    }
+
+    async populateOpinionData() {
+        const response = await fetch('opinion');
+        const data = await response.json();
+        this.setState({ forecasts: data, loading: false });
+    }
 }
