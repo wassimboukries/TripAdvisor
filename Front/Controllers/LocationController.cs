@@ -14,30 +14,39 @@ namespace Fro.Controllers
     {
         private readonly TripAdvisorContext _TripAdvisorContext;
 
-        public LocationController(TripAdvisorContext TripAdvisorContext)
-        {
-            _TripAdvisorContext = TripAdvisorContext;
 
-        }
-
-        [HttpGet]
+        [HttpGet()]
         public IEnumerable<Location> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new Location(3, "Marrakech")).ToArray();
+            return Enumerable.Range(1, 5).Select(index => new Location(1, "Clermont"));
+        }
+        /*
+        [HttpPut("(id)")]
+        public void Put(int id, String str)
+        {
+            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
+            if (location != null)
+            {
+                location.name = str;
+                _TripAdvisorContext.SaveChanges();
+            }
         }
 
-        [HttpGet("(id)")]
-        public IActionResult Get(int id)
+        [HttpPost]
+        public void Post(Location location)
         {
-            var prod = _TripAdvisorContext.Locations.SingleOrDefault();
-            if (prod != null)
-            {
-                return Ok(prod);
-            }
-            else
-            {
-                return NotFound();
-            }
+            _TripAdvisorContext.Locations.Add(location);
+            _TripAdvisorContext.SaveChanges();
         }
+
+        [HttpDelete("(id)")]
+        public void Delete(int id)
+        {
+            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
+            if (location != null)
+            {
+                _TripAdvisorContext.Locations.Remove(location);
+            }
+        }*/
     }
 }

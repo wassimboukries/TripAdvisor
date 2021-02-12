@@ -21,7 +21,7 @@ namespace DAL.Model
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Location>().ToTable("Location");
-            modelBuilder.Entity<Location>().ToTable("Opinion");
+            modelBuilder.Entity<Opinion>().ToTable("Opinion");
         }
 
 

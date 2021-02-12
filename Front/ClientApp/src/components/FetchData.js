@@ -9,7 +9,7 @@ export class FetchData extends Component {
   }
 
     componentDidMount() {
-        this.populateOpinionData();
+        this.populateLocationData();
   }
 
   static renderForecastsTable(forecasts) {
@@ -25,7 +25,7 @@ export class FetchData extends Component {
           {forecasts.map(forecast =>
             <tr key={forecast.id}>
               <td>{forecast.id}</td>
-              <td>{forecast.content}</td>
+              <td>{forecast.name}</td>
             </tr>
           )}
         </tbody>

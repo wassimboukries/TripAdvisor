@@ -22,3 +22,27 @@ Y:/ISIMA 2020-2021/Services web/TP/TripAdvisor/DAL/obj/Debug/netcoreapp3.1/DAL.c
 /Users/etienne/Projects/triplite/DAL/obj/Debug/netcoreapp3.1/DAL.pdb
 /Users/etienne/Projects/triplite/DAL/obj/Debug/netcoreapp3.1/DAL.genruntimeconfig.cache
 /Users/etienne/Projects/triplite/DAL/obj/Debug/netcoreapp3.1/DAL.csprojAssemblyReference.cache
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.json
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.dev.json
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache
+E:\Code\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+E:\Code\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.json
+E:\Code\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.dev.json
+E:\Code\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+E:\Code\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+E:\Code\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+E:\Code\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+E:\Code\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+E:\Code\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+E:\Code\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+E:\Code\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+E:\Code\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache
