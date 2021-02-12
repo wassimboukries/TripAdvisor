@@ -9,7 +9,7 @@ export class FetchData extends Component {
   }
 
     componentDidMount() {
-        this.populateOpinionData();
+        this.populateLocationData();
   }
 
   static renderForecastsTable(forecasts) {
@@ -18,14 +18,16 @@ export class FetchData extends Component {
         <thead>
           <tr>
             <th>Id</th>
+            <th>Image</th>
             <th>Name</th>
           </tr>
         </thead>
         <tbody>
           {forecasts.map(forecast =>
             <tr key={forecast.id}>
-              <td>{forecast.id}</td>
-              <td>{forecast.content}</td>
+                <td>{forecast.id}</td>
+                <td><img src={forecast.linkPicture} width='100px' alt="loading img" /></td>
+                <td>{forecast.name}</td>
             </tr>
           )}
         </tbody>
@@ -55,7 +57,6 @@ export class FetchData extends Component {
 
     async populateLocationData() {
         const response = await fetch('location');
-        console.log(response);
         const data = await response.json();
         this.setState({ forecasts: data, loading: false });
     }
