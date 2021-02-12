@@ -23,21 +23,50 @@ namespace Fro.Controllers
         [HttpGet]
         public IEnumerable<Location> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new Location(3, "Marrakech")).ToArray();
+            return _TripAdvisorContext.Locations;
         }
 
         [HttpGet("(id)")]
-        public IActionResult Get(int id)
+        public Location Get(int id)
         {
-            var prod = _TripAdvisorContext.Locations.SingleOrDefault();
-            if (prod != null)
+            var location = _TripAdvisorContext.Locations.SingleOrDefault();
+            if (location != null)
             {
-                return Ok(prod);
+                return location;
             }
             else
             {
-                return NotFound();
+                return null;
+            }
+        }
+
+        [HttpPut("(id)")]
+        public void Put(int id, String str)
+        {
+            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
+            if (location != null)
+            {
+                location.name = str;
+                _TripAdvisorContext.SaveChanges();
+            }
+        }
+
+        [HttpPost]
+        public void Post(Location location)
+        {
+            _TripAdvisorContext.Locations.Add(location);
+            _TripAdvisorContext.SaveChanges();
+        }
+
+        [HttpDelete("(id)")]
+        public void Delete(int id)
+        {
+            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
+            if (location != null)
+            {
+                _TripAdvisorContext.Locations.Remove(location);
             }
         }
     }
+}
 }
