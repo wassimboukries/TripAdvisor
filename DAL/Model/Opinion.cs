@@ -8,9 +8,9 @@ namespace DAL.Model
     {
         public int id { get; set; }
         public string Content { get; set; }
-        public string ClientID { get; set; }
+        public int ClientID { get; set; }
 
-        public Opinion(int id, string Content, string ClientID)
+        public Opinion(int id, string Content, int ClientID)
         {
             this.id = id;
             this.Content = Content;

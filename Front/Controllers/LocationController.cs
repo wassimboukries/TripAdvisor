@@ -21,9 +21,10 @@ namespace Fro.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Location> Get()
+        public Location Get()
         {
-            return _TripAdvisorContext.Locations;
+            return new Location(2, "crous");
+
         }
 
         [HttpGet("(id)")]
@@ -68,5 +69,4 @@ namespace Fro.Controllers
             }
         }
     }
-}
 }

@@ -32,7 +32,7 @@ namespace TripAdvisor.Controllers
             (
                 index,
                 " qdfsfg",
-                "qdsfgdfg"
+                6
             ));
 
         }
