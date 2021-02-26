@@ -12,29 +12,63 @@ namespace TripAdvisor.Controllers
     [Route("[controller]")]
     public class OpinionController : ControllerBase
     {
-        private static readonly string[] opnions = new[]
-        {
-            "Good", "Bad"
-        };
+        private readonly TripAdvisorContext _TripAdvisorContext;
 
-        private readonly ILogger<OpinionController> _logger;
-
-        public OpinionController(ILogger<OpinionController> logger)
+        public OpinionController(TripAdvisorContext TripAdvisorContext)
         {
-            _logger = logger;
+            _TripAdvisorContext = TripAdvisorContext;
+
         }
 
         [HttpGet]
         public IEnumerable<Opinion> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 2).Select(index => new Opinion
-            (
-                index,
-                " qdfsfg",
-                6
-            ));
-
+            return _TripAdvisorContext.Opinions;
         }
+
+        [HttpGet("(id)")]
+        public Opinion Get(int id)
+        {
+            var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
+            if (opinion != null)
+            {
+                return opinion;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        [HttpPut("(id)")]
+        public void Put(int id, String content)
+        {
+            var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
+            if (opinion != null)
+            {
+                opinion.Content = content;
+                _TripAdvisorContext.SaveChanges();
+            }
+        }
+
+        [HttpPost]
+        public void Post(Opinion opinion)
+        {
+            _TripAdvisorContext.Opinions.Add(opinion);
+            _TripAdvisorContext.SaveChanges();
+        }
+
+        [HttpDelete("(id)")]
+        public void Delete(int id)
+        {
+            var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
+            if (opinion != null)
+            {
+                _TripAdvisorContext.Opinions.Remove(opinion);
+                _TripAdvisorContext.SaveChanges();
+            }
+        }
+
+
     }
 }

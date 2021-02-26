@@ -10,6 +10,16 @@ namespace DAL.Model
         public string Content { get; set; }
         public int ClientID { get; set; }
 
-        
+        public Opinion()
+        {
+
+        }
+
+        public Opinion(int id, string Content, int ClientID)
+        {
+            this.id = id;
+            this.Content = Content;
+            this.ClientID = ClientID;
+        }
     }
 }

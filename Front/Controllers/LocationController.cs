@@ -14,11 +14,30 @@ namespace Fro.Controllers
     {
         private readonly TripAdvisorContext _TripAdvisorContext;
 
+        public LocationController(TripAdvisorContext TripAdvisorContext)
+        {
+            _TripAdvisorContext = TripAdvisorContext;
 
-        [HttpGet()]
+        }
+
+        [HttpGet]
         public IEnumerable<Location> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new Location(index, "Clermont", "https://images.france.fr/zeaejvyq9bhj/5PPHLz3qykyyAOqK8W4ESq/92b73f3a28583f9919cfb451b9e58fb9/clermont-ferrand.jpg?w=1120&h=490&q=70&fl=progressive&fit=fill"));
+            return _TripAdvisorContext.Locations;
+        }
+
+        [HttpGet("(id)")]
+        public Location Get(int id)
+        {
+            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
+            if (location != null)
+            {
+                return location;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         [HttpPut("(id)")]
@@ -46,6 +65,7 @@ namespace Fro.Controllers
             if (location != null)
             {
                 _TripAdvisorContext.Locations.Remove(location);
+                _TripAdvisorContext.SaveChanges();
             }
         }
     }

@@ -11,16 +11,21 @@ namespace DAL.Model
         public int id { get; set; }
         public string name { get; set; }
         public string linkPicture { get; set; }
-        public List<Opinion> OpinionList { get; set; }
+        public List<Opinion> opinionList { get; set; }
 
         public Location()
         {
-            OpinionList = new List<Opinion>();
+
+            opinionList = new List<Opinion>();
+            for(int i= 0; i < 5; i++)
+            {
+                addOpinion(new Opinion(i, "Pas content", 4533 + i));
+            }
         }
 
         public void addOpinion(Opinion newOpinion)
         {
-            OpinionList.Add(newOpinion);
+            opinionList.Add(newOpinion);
         }
     }
 }
