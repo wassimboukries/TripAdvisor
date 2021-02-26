@@ -13,11 +13,8 @@ namespace DAL.Model
         public string linkPicture { get; set; }
         public List<Opinion> OpinionList { get; set; }
 
-        public Location(int id, string name, string linkPicture)
+        public Location()
         {
-            this.id = id;
-            this.name = name;
-            this.linkPicture = linkPicture;
             OpinionList = new List<Opinion>();
         }
 

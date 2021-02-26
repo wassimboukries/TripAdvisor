@@ -6,33 +6,33 @@ using DAL.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Fro.Controllers
+namespace TripAdvisor.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class LocationController : ControllerBase
+    public class OpinionController : ControllerBase
     {
         private readonly TripAdvisorContext _TripAdvisorContext;
 
-        public LocationController(TripAdvisorContext TripAdvisorContext)
+        public OpinionController(TripAdvisorContext TripAdvisorContext)
         {
             _TripAdvisorContext = TripAdvisorContext;
 
         }
 
         [HttpGet]
-        public IEnumerable<Location> Get()
+        public IEnumerable<Opinion> Get()
         {
-            return _TripAdvisorContext.Locations;
+            return _TripAdvisorContext.Opinions;
         }
 
         [HttpGet("(id)")]
-        public Location Get(int id)
+        public Opinion Get(int id)
         {
-            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
-            if (location != null)
+            var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
+            if (opinion != null)
             {
-                return location;
+                return opinion;
             }
             else
             {
@@ -41,32 +41,34 @@ namespace Fro.Controllers
         }
 
         [HttpPut("(id)")]
-        public void Put(int id, String str)
+        public void Put(int id, String content)
         {
-            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
-            if (location != null)
+            var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
+            if (opinion != null)
             {
-                location.name = str;
+                opinion.Content = content;
                 _TripAdvisorContext.SaveChanges();
             }
         }
 
         [HttpPost]
-        public void Post(Location location)
+        public void Post(Opinion opinion)
         {
-            _TripAdvisorContext.Locations.Add(location);
+            _TripAdvisorContext.Opinions.Add(opinion);
             _TripAdvisorContext.SaveChanges();
         }
 
         [HttpDelete("(id)")]
         public void Delete(int id)
         {
-            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
-            if (location != null)
+            var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
+            if (opinion != null)
             {
-                _TripAdvisorContext.Locations.Remove(location);
+                _TripAdvisorContext.Opinions.Remove(opinion);
                 _TripAdvisorContext.SaveChanges();
             }
         }
+
+
     }
 }

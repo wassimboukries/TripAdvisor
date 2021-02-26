@@ -63,6 +63,8 @@ Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\bin\Debug\netcoreapp3
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\bin\Debug\netcoreapp3.1\DAL.dll
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\bin\Debug\netcoreapp3.1\DAL.pdb
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\bin\Debug\netcoreapp3.1\Humanizer.dll
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\obj\Debug\netcoreapp3.1\SwaggerAPI.csproj.CoreCompileInputs.cache
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\obj\Debug\netcoreapp3.1\SwaggerAPI.MvcApplicationPartsAssemblyInfo.cs
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\obj\Debug\netcoreapp3.1\SwaggerAPI.MvcApplicationPartsAssemblyInfo.cache

@@ -2,7 +2,7 @@
 
 namespace DAL.Migrations
 {
-    public partial class addlocationopinion : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,8 @@ namespace DAL.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    linkPicture = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -26,7 +27,7 @@ namespace DAL.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClientID = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ClientID = table.Column<int>(type: "int", nullable: false),
                     Locationid = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

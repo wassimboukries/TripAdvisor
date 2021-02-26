@@ -1,30 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/etienne/Projects/triplite/SwaggerAPI/SwaggerAPI.csproj": {}
+    "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\SwaggerAPI.csproj": {}
   },
   "projects": {
-    "/Users/etienne/Projects/triplite/DAL/DAL.csproj": {
+    "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/etienne/Projects/triplite/DAL/DAL.csproj",
+        "projectUniqueName": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "/Users/etienne/Projects/triplite/DAL/DAL.csproj",
-        "packagesPath": "/Users/etienne/.nuget/packages/",
-        "outputPath": "/Users/etienne/Projects/triplite/DAL/obj/",
+        "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/etienne/.config/NuGet/NuGet.Config"
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -36,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -86,34 +86,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/etienne/Projects/triplite/SwaggerAPI/SwaggerAPI.csproj": {
+    "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\SwaggerAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/etienne/Projects/triplite/SwaggerAPI/SwaggerAPI.csproj",
+        "projectUniqueName": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\SwaggerAPI.csproj",
         "projectName": "SwaggerAPI",
-        "projectPath": "/Users/etienne/Projects/triplite/SwaggerAPI/SwaggerAPI.csproj",
-        "packagesPath": "/Users/etienne/.nuget/packages/",
-        "outputPath": "/Users/etienne/Projects/triplite/SwaggerAPI/obj/",
+        "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\SwaggerAPI.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/etienne/.config/NuGet/NuGet.Config"
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/Users/etienne/Projects/triplite/DAL/DAL.csproj": {
-                "projectPath": "/Users/etienne/Projects/triplite/DAL/DAL.csproj"
+              "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj": {
+                "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj"
               }
             }
           }
@@ -126,9 +127,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.2, )"
             },
@@ -155,7 +161,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
