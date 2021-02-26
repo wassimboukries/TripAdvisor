@@ -18,9 +18,9 @@ namespace Fro.Controllers
         [HttpGet()]
         public IEnumerable<Location> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new Location(1, "Clermont"));
+            return Enumerable.Range(1, 5).Select(index => new Location(index, "Clermont", "https://images.france.fr/zeaejvyq9bhj/5PPHLz3qykyyAOqK8W4ESq/92b73f3a28583f9919cfb451b9e58fb9/clermont-ferrand.jpg?w=1120&h=490&q=70&fl=progressive&fit=fill"));
         }
-        /*
+
         [HttpPut("(id)")]
         public void Put(int id, String str)
         {
@@ -47,6 +47,6 @@ namespace Fro.Controllers
             {
                 _TripAdvisorContext.Locations.Remove(location);
             }
-        }*/
+        }
     }
 }

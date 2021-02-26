@@ -5913,20 +5913,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wassi\\.nuget\\packages\\": {}
+    "/Users/etienne/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Code\\triplite\\SwaggerAPI\\SwaggerAPI.csproj",
+      "projectUniqueName": "/Users/etienne/Projects/triplite/SwaggerAPI/SwaggerAPI.csproj",
       "projectName": "SwaggerAPI",
-      "projectPath": "E:\\Code\\triplite\\SwaggerAPI\\SwaggerAPI.csproj",
-      "packagesPath": "C:\\Users\\wassi\\.nuget\\packages\\",
-      "outputPath": "E:\\Code\\triplite\\SwaggerAPI\\obj\\",
+      "projectPath": "/Users/etienne/Projects/triplite/SwaggerAPI/SwaggerAPI.csproj",
+      "packagesPath": "/Users/etienne/.nuget/packages/",
+      "outputPath": "/Users/etienne/Projects/triplite/SwaggerAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\wassi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/etienne/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5939,8 +5938,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\Code\\triplite\\DAL\\DAL.csproj": {
-              "projectPath": "E:\\Code\\triplite\\DAL\\DAL.csproj"
+            "/Users/etienne/Projects/triplite/DAL/DAL.csproj": {
+              "projectPath": "/Users/etienne/Projects/triplite/DAL/DAL.csproj"
             }
           }
         }
@@ -5982,7 +5981,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
