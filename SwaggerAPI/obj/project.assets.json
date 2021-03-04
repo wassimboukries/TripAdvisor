@@ -5972,33 +5972,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
+    "/Users/etienne/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\SwaggerAPI.csproj",
+      "projectUniqueName": "/Users/etienne/Projects/triplite/SwaggerAPI/SwaggerAPI.csproj",
       "projectName": "SwaggerAPI",
-      "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\SwaggerAPI.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\obj\\",
+      "projectPath": "/Users/etienne/Projects/triplite/SwaggerAPI/SwaggerAPI.csproj",
+      "packagesPath": "/Users/etienne/.nuget/packages/",
+      "outputPath": "/Users/etienne/Projects/triplite/SwaggerAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/etienne/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj": {
-              "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj"
+            "/Users/etienne/Projects/triplite/DAL/DAL.csproj": {
+              "projectPath": "/Users/etienne/Projects/triplite/DAL/DAL.csproj"
             }
           }
         }
@@ -6011,6 +6010,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -6045,7 +6045,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }

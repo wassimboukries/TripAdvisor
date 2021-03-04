@@ -15,12 +15,8 @@ namespace DAL.Model
 
         public Location()
         {
-
             opinionList = new List<Opinion>();
-            for(int i= 0; i < 5; i++)
-            {
-                addOpinion(new Opinion(i, "Pas content", 4533 + i));
-            }
+           
         }
 
         public void addOpinion(Opinion newOpinion)
