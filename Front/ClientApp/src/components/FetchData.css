@@ -1,14 +1,18 @@
 ﻿body {
 }
 
+.container {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+    max-width: none;
+}
 
 
 .corps {
     display: flex;
     flex-flow: wrap;
-}
-h1{
-    position:center;
+    justify-content: center;
 }
 
 .card {
@@ -17,15 +21,19 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width: 370px;
     height: 400px;
     margin: 10px;
     border: solid black 1px;
-    vertical-align: top;
+}
+
+.card-title {
+    position: absolute;
+    top: 10px;
 }
 
 
 img{
-    max-width:280px;
-    max-height: 280px;
+    max-width: 280px;
+    max-height: 250px;
 }
