@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using DAL.Model;
+using DTO;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
-namespace TripAdvisor.Controllers
+namespace SwaggerAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -21,23 +20,18 @@ namespace TripAdvisor.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Opinion> Get()
+        public IEnumerable<OpinionDto> Get()
         {
-            return _TripAdvisorContext.Opinions;
+            return _TripAdvisorContext.Opinions.Select(element => element.ToDto());
         }
 
         [HttpGet("(id)")]
-        public Opinion Get(int id)
+        public OpinionDto Get(int id)
         {
-            var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
-            if (opinion != null)
-            {
-                return opinion;
-            }
-            else
-            {
-                return null;
-            }
+            OpinionDto opinion = null;
+            opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id).ToDto();
+            return opinion;
+            
         }
 
         [HttpPut("(id)")]

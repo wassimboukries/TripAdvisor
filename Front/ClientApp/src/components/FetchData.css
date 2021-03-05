@@ -1,4 +1,6 @@
 ﻿body {
+    resize: horizontal;
+    overflow : auto;
 }
 
 
@@ -7,9 +9,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
-}
-h1{
-    position:center;
 }
 
 .card {
@@ -25,4 +24,23 @@ h1{
 
 img{
     max-width:380px;
+}
+
+.opinion{
+    display : flex;
+    flex-direction : row;
+}
+
+.opinion div {
+    margin : 5px;
+}
+
+@media (min-width: 650px) {
+    .span4 {
+        grid-column-end: span 4;
+    }
+
+    .span6 {
+        grid-column-end: span 6;
+    }
 }

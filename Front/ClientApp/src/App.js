@@ -12,8 +12,8 @@ export default class App extends Component {
 
   render () {
     return (
-      <Layout>
-        <Route path='/fetch-data' component={FetchData} />
+        <Layout>
+            <Route path='/' component={FetchData} />
       </Layout>
     );
   }

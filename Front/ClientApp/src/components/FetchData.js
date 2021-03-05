@@ -26,16 +26,20 @@ export class FetchData extends Component {
 
                         <div className="card"  >
                             <h1> {forecast.name} </h1>
-                            <td><img  src={forecast.linkPicture}  alt="loading img" /></td>
-                            <td>{forecast.name}</td>
-                            <td>{forecast.weather.main.temp}</td>
-
+                            <div><img  src={forecast.linkPicture}  alt="loading img" /></div>
+                            <div>{forecast.name}</div>
+                            <div>{forecast.weather.main.temp}</div>
+                            <details>
+                                <summary>Avis</summary>
+                                {forecast.opinionList.map(opinion => <div className="opinion" >
+                                    <div>Client {opinion.clientID} : </div>
+                                    <div>{opinion.content}</div>
+                                    </div>)}
+                             </details>
 
                         </div>
                         
-                        {forecast.opinionList.map(opinion => <tr className={"opn-" + forecast.id}  > <td>{opinion.id}</td>
-                            <td>{opinion.content}</td>
-                            <td>{opinion.clientID}</td></tr>)}
+                        
                         
                         
                     </div>
