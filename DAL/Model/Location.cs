@@ -15,8 +15,8 @@ namespace DAL.Model
 
         public Location()
         {
-
             opinionList = new List<Opinion>();
+           
         }
 
         public void addOpinion(Opinion newOpinion)
