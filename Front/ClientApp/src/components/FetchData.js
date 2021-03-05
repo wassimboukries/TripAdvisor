@@ -7,8 +7,7 @@ export class FetchData extends Component {
 
   constructor(props) {
     super(props);
-      this.state = { forecasts: [], loading: true };
-      //this.state = { forecastOpinion: [], loading: true };
+      this.state = { forecasts: [], forecastOpinion: [], loading: true };
   }
 
     componentDidMount() {
@@ -16,10 +15,11 @@ export class FetchData extends Component {
         this.populateOpinionData();
   }
 
-  static renderForecastsTable(forecasts) {
-      return(
-      <table className='table table-striped' aria-labelledby="tabelLabel">
-       
+    static renderForecastsTable(forecasts) {
+     
+        return (
+            <table className='table table-striped' aria-labelledby="tabelLabel">
+
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -27,52 +27,56 @@ export class FetchData extends Component {
                         <th>Name</th>
                     </tr>
                 </thead>
-           {forecasts.map(forecast =>
-           <tbody>
+                {forecasts.map(forecast =>
+                    <tbody key={forecast.id}>
 
-                   <tr key={forecast.id} >
-                       <td> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                           Button with data-target</button></td>
-                <td><img src={forecast.linkPicture} width='100px' alt="loading img" /></td>
-                <td>{forecast.name}</td>
+                        <tr  >
+                            <td> {forecast.id} </td>
+                            <td><img src={forecast.linkPicture} width='100px' alt="loading img" /></td>
+                            <td>{forecast.name}</td>
 
-                   </tr>
-                   {forecast.opinionList.map(opinion => <tr className={"opn-" + forecast.id}  > <td>{opinion.id}</td>
-                       <td>{opinion.content}</td>
-                       <td>{opinion.clientID}</td></tr>)}
-               </tbody>
-
-               
-
-          )}
-        </table>
-    );
-  }
+                        </tr>
+                        {forecast.opinionList.map(opinion =>
+                            <tr className={"opn-" + forecast.id} >
+                                <td>{opinion.id}</td>
+                                <td>{opinion.content}</td>
+                                <td>{opinion.clientID}</td>
+                            </tr>)}
+                        
+                    </tbody>
+                )}
+            </table>
+        );
+    }
 
   render() {
     let contents = this.state.loading
-      ? <p><em>Loading...</em></p>
-      : FetchData.renderForecastsTable(this.state.forecasts);
+        ? <p><em>Loading...</em></p>
+        : FetchData.renderForecastsTable(this.state.forecasts);
 
     return (
       <div>
-        <h1 id="tabelLabel" >Weather forecast</h1>
-        <p>This component demonstrates fetching data from the server.</p>
+        <h1 id="tabelLabel" >Locations: </h1>
         {contents}
       </div>
     );
   }
 
-  async populateWeatherData() {
-    const response = await fetch('weatherforecast');
-    const data = await response.json();
-    this.setState({ forecasts: data, loading: false });
-  }
-
     async populateLocationData() {
         const response = await fetch('location');
         const data = await response.json();
+        data.map(elt => {
+            
+            fetch('location/getOpinions/' + elt.id, {
+                method: 'get'
+            })
+                .then(json => {
+                    debugger;
+                    elt.opinionList = json
+                });
+        });
         this.setState({ forecasts: data, loading: false });
+        
     }
 
     async populateOpinionData() {

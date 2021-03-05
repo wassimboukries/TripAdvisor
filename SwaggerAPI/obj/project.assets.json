@@ -1596,6 +1596,19 @@
         "runtime": {
           "bin/placeholder/DAL.dll": {}
         }
+      },
+      "DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DTO.dll": {}
+        }
       }
     }
   },
@@ -5961,11 +5974,17 @@
       "type": "project",
       "path": "../DAL/DAL.csproj",
       "msbuildProject": "../DAL/DAL.csproj"
+    },
+    "DTO/1.0.0": {
+      "type": "project",
+      "path": "../DTO/DTO.csproj",
+      "msbuildProject": "../DTO/DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "DAL >= 1.0.0",
+      "DTO >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.2",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.2",
       "Swashbuckle.AspNetCore >= 6.0.4"
@@ -5999,6 +6018,9 @@
           "projectReferences": {
             "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj": {
               "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj"
+            },
+            "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DTO\\DTO.csproj": {
+              "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DTO\\DTO.csproj"
             }
           }
         }

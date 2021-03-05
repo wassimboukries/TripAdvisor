@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using DAL.Model;
+using DTO;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 
-namespace Fro.Controllers
+namespace SwaggerAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -21,23 +21,17 @@ namespace Fro.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Location> Get()
+        public IEnumerable<LocationDto> Get()
         {
-            return _TripAdvisorContext.Locations;
+            return _TripAdvisorContext.Locations.Include(element => element.opinionList).Select(element => element.ToDto());
         }
 
         [HttpGet("(id)")]
-        public Location Get(int id)
+        public LocationDto Get(int id)
         {
-            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
-            if (location != null)
-            {
-                return location;
-            }
-            else
-            {
-                return null;
-            }
+            LocationDto location = null;
+            location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id).ToDto();
+            return location;    
         }
 
         [HttpPut("(id)")]

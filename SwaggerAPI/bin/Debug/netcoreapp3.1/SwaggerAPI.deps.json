@@ -25,6 +25,7 @@
       "SwaggerAPI/1.0.0": {
         "dependencies": {
           "DAL": "1.0.0",
+          "DTO": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.2",
           "Microsoft.EntityFrameworkCore.Design": "5.0.2",
           "Swashbuckle.AspNetCore": "6.0.4",
@@ -1457,6 +1458,17 @@
         },
         "compile": {
           "DAL.dll": {}
+        }
+      },
+      "DTO/1.0.0": {
+        "dependencies": {
+          "DAL": "1.0.0"
+        },
+        "runtime": {
+          "DTO.dll": {}
+        },
+        "compile": {
+          "DTO.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -3802,6 +3814,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DTO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

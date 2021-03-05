@@ -68,3 +68,5 @@ Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\bin\Debug\netcoreapp3
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\obj\Debug\netcoreapp3.1\SwaggerAPI.csproj.CoreCompileInputs.cache
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\obj\Debug\netcoreapp3.1\SwaggerAPI.MvcApplicationPartsAssemblyInfo.cs
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\obj\Debug\netcoreapp3.1\SwaggerAPI.MvcApplicationPartsAssemblyInfo.cache
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\bin\Debug\netcoreapp3.1\DTO.dll
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\SwaggerAPI\bin\Debug\netcoreapp3.1\DTO.pdb
