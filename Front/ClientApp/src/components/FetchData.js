@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './FetchData.css';
 
 export class FetchData extends Component {
     static displayName = FetchData.name;
 
 
-
+     
     constructor(props) {
         super(props);
         this.state = { forecasts: [], loading: true, weather: []};
@@ -19,39 +20,30 @@ export class FetchData extends Component {
 
     static renderForecastsTable(forecasts) {
         return (
-            <table className='table table-striped' aria-labelledby="tabelLabel">
-
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Température</th>
-                    </tr>
-                </thead>
+                <div className="corps" >
                 {forecasts.map(forecast =>
-                    <tbody key={forecast.id}>
+                    <div key={forecast.id} >
 
-                        <tr  >
-                            <td> {forecast.id} </td>
-                            <td><img src={forecast.linkPicture} width='100px' alt="loading img" /></td>
+                        <div className="card"  >
+                            <h1> {forecast.name} </h1>
+                            <td><img  src={forecast.linkPicture}  alt="loading img" /></td>
                             <td>{forecast.name}</td>
                             <td>{forecast.weather.main.temp}</td>
 
 
-                        </tr>
+                        </div>
                         
                         {forecast.opinionList.map(opinion => <tr className={"opn-" + forecast.id}  > <td>{opinion.id}</td>
                             <td>{opinion.content}</td>
                             <td>{opinion.clientID}</td></tr>)}
                         
                         
-                    </tbody>
+                    </div>
 
 
 
                 )}
-            </table>
+            </div>
         );
     }
 
