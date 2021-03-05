@@ -13,3 +13,18 @@ Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.dll
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.pdb
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.genruntimeconfig.cache
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.deps.json
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.runtimeconfig.json
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.runtimeconfig.dev.json
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.dll
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.pdb
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.AssemblyInfoInputs.cache
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.AssemblyInfo.cs
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csproj.CopyComplete
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.dll
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.pdb
+C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.genruntimeconfig.cache

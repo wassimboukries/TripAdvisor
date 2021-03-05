@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\SwaggerAPI.csproj": {}
+    "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\SwaggerAPI\\SwaggerAPI.csproj": {}
   },
   "projects": {
-    "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj": {
+    "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "EntityFramework": {
               "target": "Package",
@@ -90,21 +95,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DTO\\DTO.csproj": {
+    "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -116,9 +124,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj": {
-                "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj"
+              "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DAL\\DAL.csproj"
               }
             }
           }
@@ -131,6 +140,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -146,21 +156,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\SwaggerAPI.csproj": {
+    "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\SwaggerAPI\\SwaggerAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\SwaggerAPI.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\SwaggerAPI\\SwaggerAPI.csproj",
         "projectName": "SwaggerAPI",
-        "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\SwaggerAPI.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\SwaggerAPI\\obj\\",
+        "projectPath": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\SwaggerAPI\\SwaggerAPI.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\SwaggerAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,12 +185,13 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj": {
-                "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DAL\\DAL.csproj"
+              "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DAL\\DAL.csproj"
               },
-              "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DTO\\DTO.csproj": {
-                "projectPath": "Y:\\ISIMA 2020-2021\\Services web\\Projet\\triplite\\DTO\\DTO.csproj"
+              "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\lucas\\Documents\\ISIMA\\2A\\P2\\service_web\\trip_advisor\\triplite\\DTO\\DTO.csproj"
               }
             }
           }
@@ -190,6 +204,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -224,7 +239,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

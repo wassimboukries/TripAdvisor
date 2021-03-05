@@ -4,9 +4,8 @@
 
 
 .corps {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    flex-flow: wrap;
 }
 h1{
     position:center;
@@ -18,11 +17,15 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
+    width: 350px;
+    height: 400px;
     margin: 10px;
     border: solid black 1px;
+    vertical-align: top;
 }
 
+
 img{
-    max-width:380px;
+    max-width:280px;
+    max-height: 280px;
 }
