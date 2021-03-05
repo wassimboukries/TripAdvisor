@@ -30,14 +30,17 @@ export class FetchData extends Component {
                     </tr>
                 </thead>
                 {forecasts.map(forecast =>
-                    <tbody>
+                    <tbody key={forecast.id}>
 
-                        <tr key={forecast.id} >
+                        <tr  >
                             <td> {forecast.id} </td>
                             <td><img src={forecast.linkPicture} width='100px' alt="loading img" /></td>
                             <td>{forecast.name}</td>
+                            <td>{forecast.weather.main.temp}</td>
+
 
                         </tr>
+                        
                         {forecast.opinionList.map(opinion => <tr className={"opn-" + forecast.id}  > <td>{opinion.id}</td>
                             <td>{opinion.content}</td>
                             <td>{opinion.clientID}</td></tr>)}
@@ -76,16 +79,16 @@ export class FetchData extends Component {
     async populateLocationData() {
         const response = await fetch('location');
         const data = await response.json();
+        const promises = [];
+        data.map(elt => {
+            let url = 'https://api.openweathermap.org/data/2.5/weather?q=' + elt.name + ',mar&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric';
+            promises.push(fetch(url)
+                .then(res => res.json())
+                .then(dataw => elt.weather = dataw));
+        });
+        const result = await Promise.all(promises);
         this.setState({ forecasts: data, loading: false });
         console.log('forecast', this.state.forecasts);
-        let tab = []
-        this.state.forecasts.map(elt => {
-            let url = 'https://api.openweathermap.org/data/2.5/weather?q=' + elt.name + ',mar&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric';
-            fetch(url)
-                .then(res => res.json())
-                .then(data => elt.weather = data)
-        });
-        console.log(this.state.forecasts[0].weather);
 
     }
 
