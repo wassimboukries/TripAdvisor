@@ -34,7 +34,7 @@ namespace SwaggerAPI.Controllers
             
         }
 
-        [HttpPut("(id)")]
+        [HttpPut("(id, content)")]
         public void Put(int id, String content)
         {
             var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
@@ -45,10 +45,11 @@ namespace SwaggerAPI.Controllers
             }
         }
 
-        [HttpPost]
-        public void Post(Opinion opinion)
+        [HttpPost("(locationid)")]
+        public void Post(int locationid, Opinion opinion)
         {
-            _TripAdvisorContext.Opinions.Add(opinion);
+            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == locationid);
+            location.addOpinion(opinion);
             _TripAdvisorContext.SaveChanges();
         }
 

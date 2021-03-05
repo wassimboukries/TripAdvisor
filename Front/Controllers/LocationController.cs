@@ -56,7 +56,7 @@ namespace Front.Controllers
         [HttpDelete("(id)")]
         public void Delete(int id)
         {
-            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
+            var location = _TripAdvisorContext.Locations.Include(element => element.opinionList).SingleOrDefault(loc => loc.id == id);
             if (location != null)
             {
                 _TripAdvisorContext.Locations.Remove(location);

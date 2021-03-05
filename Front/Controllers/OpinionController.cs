@@ -34,7 +34,7 @@ namespace Front.Controllers
 
         }
 
-        [HttpPut("(id)")]
+        [HttpPut("(id, content)")]
         public void Put(int id, String content)
         {
             var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);

@@ -14,34 +14,29 @@ export class FetchData extends Component {
     componentDidMount() {
         this.populateLocationData();
         this.populateOpinionData();
-        
-        this.populateWeatherData();
     }
 
     static renderForecastsTable(forecasts) {
         return (
-                <div className="corps" >
+            <div className="corps" >
                 {forecasts.map(forecast =>
                     <div key={forecast.id} >
 
                         <div className="card"  >
                             <h1> {forecast.name} </h1>
-                            <td><img  src={forecast.linkPicture}  alt="loading img" /></td>
-                            <td>{forecast.name}</td>
-                            <td>{forecast.weather.main.temp}</td>
-
-
+                            <div><img src={forecast.linkPicture} alt="loading img" /></div>
+                            <div>{forecast.name}</div>
+                            <div>{forecast.weather.main.temp}&#8451;</div>
                         </div>
-                        
-                        {forecast.opinionList.map(opinion => <tr className={"opn-" + forecast.id}  > <td>{opinion.id}</td>
-                            <td>{opinion.content}</td>
-                            <td>{opinion.clientID}</td></tr>)}
+
+                        {forecast.opinionList.map(opinion =>
+                            <div className={"opn-" + forecast.id}>
+                                <div>{opinion.content}</div>
+                                <div>{opinion.clientID}</div>
+                            </div>)}
                         
                         
                     </div>
-
-
-
                 )}
             </div>
         );
@@ -56,16 +51,10 @@ export class FetchData extends Component {
 
         return (
             <div>
-                <h1 id="tabelLabel" >Weather forecast</h1>
-                <p>This component demonstrates fetching data from the server.</p>
+                <h1 id="tabelLabel" >Welcome to TripAdvisor !</h1>
                 {contents}
             </div>
         );
-    }
-
-    async populateWeatherData() {
-           
-        
     }
 
     async populateLocationData() {
