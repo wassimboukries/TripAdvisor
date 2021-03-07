@@ -3,12 +3,18 @@
     overflow : auto;
 }
 
+.container {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+    max-width: none;
+}
 
 
 .corps {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -17,30 +23,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
+    width: 370px;
+    height: 400px;
     margin: 10px;
     border: solid black 1px;
 }
 
+.card-title {
+    position: absolute;
+    top: 10px;
+}
+
+
 img{
-    max-width:380px;
-}
-
-.opinion{
-    display : flex;
-    flex-direction : row;
-}
-
-.opinion div {
-    margin : 5px;
-}
-
-@media (min-width: 650px) {
-    .span4 {
-        grid-column-end: span 4;
-    }
-
-    .span6 {
-        grid-column-end: span 6;
-    }
+    max-width: 280px;
+    max-height: 250px;
 }
