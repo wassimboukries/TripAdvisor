@@ -4,11 +4,11 @@ import './FetchData.css';
 export class FetchData extends Component {
     static displayName = FetchData.name;
 
-
      
     constructor(props) {
         super(props);
-        this.state = { forecasts: [], loading: true, weather: []};
+        this.state = { forecasts: [], loading: true, weather: [], clickeds: [] };
+        this.displayOpinions = this.displayOpinions.bind(this);
     }
 
     componentDidMount() {
@@ -16,23 +16,31 @@ export class FetchData extends Component {
         this.populateOpinionData();
     }
 
-    static renderForecastsTable(forecasts) {
+     renderForecastsTable(forecasts, clickeds) {
         return (
             <div className="corps" >
-                {forecasts.map(forecast =>
+                {forecasts.map((forecast, index) =>
                     <div key={forecast.id} >
 
                         <div className="card"  >
                             <h1 className="card-title"> {forecast.name} </h1>
                             <div><img src={forecast.linkPicture} alt="loading img" /></div>
                             <div>{forecast.weather.main.temp}&#8451;</div>
+                            <div><button id={'avis-' + forecast.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(index)}>Avis</button></div>
+                            {
+                                (clickeds[index])?
+                                    <div>
+                                        <input type='text' placeholder='Taper votre commentaire' />
+                                        {forecast.opinionList.map(opinion =>
+                                            <div key={"opn-" + opinion.id} className="opinion">
+                                                <div>{opinion.clientID} : {opinion.content}</div>
+                                            </div>)}
+                                </div> : null
+                            }
+                            
                         </div>
 
-                        {forecast.opinionList.map(opinion =>
-                            <div key={"opn-" + forecast.id} className="opinion">
-                                <div>{opinion.content}</div>
-                                <div>{opinion.clientID}</div>
-                            </div>)}
+                        
                         
                         
                     </div>
@@ -44,7 +52,7 @@ export class FetchData extends Component {
     render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            :  FetchData.renderForecastsTable(this.state.forecasts);
+            : this.renderForecastsTable(this.state.forecasts, this.state.clickeds);
             
 
 
@@ -70,6 +78,11 @@ export class FetchData extends Component {
         this.setState({ forecasts: data, loading: false });
         console.log('forecast', this.state.forecasts);
 
+        let temp = []
+        for (let i = 0; i < this.state.forecasts.length; ++i)
+            temp.push(false);
+
+        this.setState({ clickeds: temp });
     }
 
     async populateOpinionData() {
@@ -78,5 +91,10 @@ export class FetchData extends Component {
         this.setState({ forecastOpinion: data, loading: false });
     }
 
-    
+    displayOpinions(index) {
+        console.log("ypppppppppppp");
+        let temp = this.state.clickeds;
+        temp[index] = !temp[index];
+        this.setState({ clickeds : temp });
+    }
 }
