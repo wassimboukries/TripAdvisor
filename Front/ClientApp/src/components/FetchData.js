@@ -25,7 +25,6 @@ export class FetchData extends Component {
                         <div className="card"  >
                             <h1> {forecast.name} </h1>
                             <div><img src={forecast.linkPicture} alt="loading img" /></div>
-                            <div>{forecast.name}</div>
                             <div>{forecast.weather.main.temp}&#8451;</div>
                         </div>
 

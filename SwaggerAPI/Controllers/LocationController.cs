@@ -21,46 +21,56 @@ namespace SwaggerAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<LocationDto> Get()
+        public ActionResult<IEnumerable<LocationDto>> Get()
         {
-            return _TripAdvisorContext.Locations.Include(element => element.opinionList).Select(element => element.ToDto());
+            return Ok(_TripAdvisorContext.Locations.Include(element => element.opinionList).Select(element => element.ToDto()));
         }
 
-        [HttpGet("(id)")]
-        public LocationDto Get(int id)
+        [HttpGet("{id}")]
+        public ActionResult<LocationDto> Get(int id)
         {
-            LocationDto location = null;
-            location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id).ToDto();
-            return location;    
+            Location location = null;
+            location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
+            if (location != null)
+            {
+                return Ok(location.ToDto());
+            }
+             return NotFound();
+               
         }
 
-        [HttpPut("(id, linkPicture)")]
-        public void Put(int id, String picture)
+        [HttpPut("{id, linkPicture}")]
+        public ActionResult Put(int id, String picture)
         {
             var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);
             if (location != null)
             {
                 location.linkPicture = picture;
                 _TripAdvisorContext.SaveChanges();
+                return Ok();
             }
+            return NotFound();
         }
 
         [HttpPost]
-        public void Post(Location location)
+        public ActionResult Post(Location location)
         {
             _TripAdvisorContext.Locations.Add(location);
             _TripAdvisorContext.SaveChanges();
+            return Ok();
         }
 
-        [HttpDelete("(id)")]
-        public void Delete(int id)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
         {
             var location = _TripAdvisorContext.Locations.Include(element => element.opinionList).SingleOrDefault(loc => loc.id == id);
             if (location != null)
             {
                 _TripAdvisorContext.Locations.Remove(location);
                 _TripAdvisorContext.SaveChanges();
+                return Ok();
             }
+            return NotFound();
         }
     }
 }

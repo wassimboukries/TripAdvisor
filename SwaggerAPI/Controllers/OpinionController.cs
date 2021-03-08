@@ -20,48 +20,63 @@ namespace SwaggerAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<OpinionDto> Get()
+        public ActionResult<IEnumerable<OpinionDto>> Get()
         {
-            return _TripAdvisorContext.Opinions.Select(element => element.ToDto());
+            return Ok(_TripAdvisorContext.Opinions.Select(element => element.ToDto()));
         }
 
-        [HttpGet("(id)")]
-        public OpinionDto Get(int id)
+        [HttpGet("{id}")]
+        public ActionResult<OpinionDto> Get(int id)
         {
-            OpinionDto opinion = null;
-            opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id).ToDto();
-            return opinion;
+            Opinion opinion = null;
+            opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
+            if (opinion != null)
+            {
+                return Ok(opinion.ToDto());
+            }
+            return NotFound();
             
         }
 
-        [HttpPut("(id, content)")]
-        public void Put(int id, String content)
+        [HttpPut("{id, content}")]
+        public ActionResult Put(int id, String content)
         {
             var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
             if (opinion != null)
             {
                 opinion.Content = content;
                 _TripAdvisorContext.SaveChanges();
+                return Ok();
             }
+            return NotFound();
         }
 
-        [HttpPost("(locationid)")]
-        public void Post(int locationid, Opinion opinion)
+        [HttpPost("{locationid}")]
+        public ActionResult Post(int locationid, Opinion opinion)
         {
-            var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == locationid);
+            Location location = null;
+            location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == locationid);
+            if (location == null)
+            {
+                return NotFound();
+            }
             location.addOpinion(opinion);
             _TripAdvisorContext.SaveChanges();
+            return Ok();
         }
 
-        [HttpDelete("(id)")]
-        public void Delete(int id)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
         {
             var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);
             if (opinion != null)
             {
                 _TripAdvisorContext.Opinions.Remove(opinion);
                 _TripAdvisorContext.SaveChanges();
+                return NotFound();
             }
+            return Ok();
+
         }
 
 
