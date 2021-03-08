@@ -1,15 +1,20 @@
 ﻿body {
+    resize: horizontal;
+    overflow : auto;
 }
 
+.container {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+    max-width: none;
+}
 
 
 .corps {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-}
-h1{
-    position:center;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -18,11 +23,24 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
+    width: 370px;
+    height: 400px;
     margin: 10px;
     border: solid black 1px;
 }
 
-img{
-    max-width:380px;
+.card-title {
+    position: absolute;
+    top: 10px;
 }
+
+
+img{
+    max-width: 280px;
+    max-height: 250px;
+}
+
+/*.btnAvis {
+    position: absolute;
+    bottom: 10px;
+}*/
