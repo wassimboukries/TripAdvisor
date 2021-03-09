@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './FetchData.css';
+import { Location } from './Location';
 
 export class FetchData extends Component {
     static displayName = FetchData.name;
@@ -7,7 +8,7 @@ export class FetchData extends Component {
      
     constructor(props) {
         super(props);
-        this.state = { forecasts: [], loading: true, weather: [], clickeds: [] };
+        this.state = { forecasts: [], loading: true, weather: [], selectedLocation : null };
         this.displayOpinions = this.displayOpinions.bind(this);
     }
 
@@ -19,33 +20,26 @@ export class FetchData extends Component {
      renderForecastsTable(forecasts, clickeds) {
         return (
             <div className="corps" >
-                {forecasts.map((forecast, index) =>
-                    <div key={forecast.id} >
+                <div className="list">
+                    {forecasts.map((forecast, index) =>
+                        <div key={forecast.id} >
 
-                        <div className="card"  >
-                            <h1 className="card-title"> {forecast.name} </h1>
-                            <div><img src={forecast.linkPicture} alt="loading img" /></div>
-                            <div>{forecast.weather.main.temp}&#8451;</div>
-                            <div><button id={'avis-' + forecast.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(index)}>Avis</button></div>
-                            {
-                                (clickeds[index])?
-                                    <div>
-                                        <input type='text' placeholder='Taper votre commentaire' />
-                                        {forecast.opinionList.map(opinion =>
-                                            <div key={"opn-" + opinion.id} className="opinion">
-                                                <div>{opinion.clientID} : {opinion.content}</div>
-                                            </div>)}
-                                </div> : null
-                            }
-                            
+                            <div className="card"  >
+                                <div><img src={forecast.linkPicture} alt="loading img" /></div>
+                                <h2 className="card-title"> {forecast.name} </h2>
+                                <div>{forecast.weather.main.temp}&#8451;</div>
+                                <div><button id={'avis-' + forecast.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(forecast)}>Savoir plus</button></div>
+                            </div>
+                        
                         </div>
-
-                        
-                        
-                        
-                    </div>
-                )}
+                    )}
+                </div>
+                {
+                    this.state.selectedLocation != null ? <Location element={this.state.selectedLocation} /> : null
+                }
+                
             </div>
+            
         );
     }
 
@@ -91,10 +85,19 @@ export class FetchData extends Component {
         this.setState({ forecastOpinion: data, loading: false });
     }
 
-    displayOpinions(index) {
+    displayOpinions(forecast) {
         console.log("ypppppppppppp");
-        let temp = this.state.clickeds;
-        temp[index] = !temp[index];
-        this.setState({ clickeds : temp });
+        this.setState({ selectedLocation: forecast });
     }
 }
+
+/*{
+                                    (clickeds[index])?
+                                    <div>
+                                        <input type='text' placeholder='Taper votre commentaire' />
+                                        {forecast.opinionList.map(opinion =>
+                                            <div key={"opn-" + opinion.id} className="opinion">
+                                                <div>{opinion.clientID} : {opinion.content}</div>
+                                            </div>)}
+                                    </div> : null
+                            }*/
