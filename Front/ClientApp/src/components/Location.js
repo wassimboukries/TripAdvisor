@@ -21,7 +21,7 @@ export class Location extends Component {
                         </div>
                     )
                 }
-                <form onSubmit={() =>  this.handleSubmit(event)}>
+                <form >
                     <input type='text' placeholder='Rédiger votre Avis' className="form-control" />
                     <button type="submit" ></button>
                 </form>

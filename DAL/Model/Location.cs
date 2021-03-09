@@ -11,6 +11,7 @@ namespace DAL.Model
         public int id { get; set; }
         public string name { get; set; }
         public string linkPicture { get; set; }
+        public double rateLocation { get; set; }
         public List<Opinion> opinionList { get; set; }
 
         public Location()

@@ -8,18 +8,7 @@ namespace DAL.Model
     {
         public int id { get; set; }
         public string Content { get; set; }
-        public int ClientID { get; set; }
+        public double rateOpinion { get; set; }
 
-        public Opinion()
-        {
-
-        }
-
-        public Opinion(int id, string Content, int ClientID)
-        {
-            this.id = id;
-            this.Content = Content;
-            this.ClientID = ClientID;
-        }
     }
 }

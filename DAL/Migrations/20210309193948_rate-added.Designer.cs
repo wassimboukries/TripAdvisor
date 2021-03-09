@@ -4,14 +4,16 @@ using DAL.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DAL.Migrations
 {
     [DbContext(typeof(TripAdvisorContext))]
-    partial class TripAdvisorContextModelSnapshot : ModelSnapshot
+    [Migration("20210309193948_rate-added")]
+    partial class rateadded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,8 +34,8 @@ namespace DAL.Migrations
                     b.Property<string>("name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("rateLocation")
-                        .HasColumnType("float");
+                    b.Property<int>("rateLocation")
+                        .HasColumnType("int");
 
                     b.HasKey("id");
 
@@ -53,8 +55,8 @@ namespace DAL.Migrations
                     b.Property<int?>("Locationid")
                         .HasColumnType("int");
 
-                    b.Property<double>("rateOpinion")
-                        .HasColumnType("float");
+                    b.Property<int>("rateOpinion")
+                        .HasColumnType("int");
 
                     b.HasKey("id");
 

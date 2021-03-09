@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.AssemblyInfoInputs.cache
-Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.AssemblyInfo.cs
-Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csproj.CoreCompileInputs.cache
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.deps.json
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.runtimeconfig.json
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.runtimeconfig.dev.json
@@ -10,39 +6,10 @@ Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\bin\Debug\netcoreapp3.1\DAL.dll
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\bin\Debug\netcoreapp3.1\DAL.pdb
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csprojAssemblyReference.cache
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.AssemblyInfoInputs.cache
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.AssemblyInfo.cs
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csproj.CoreCompileInputs.cache
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csproj.CopyComplete
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.dll
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.pdb
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.genruntimeconfig.cache
-E:\Code\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.deps.json
-E:\Code\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.runtimeconfig.json
-E:\Code\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.runtimeconfig.dev.json
-E:\Code\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.dll
-E:\Code\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.pdb
-E:\Code\triplite\DTO\bin\Debug\netcoreapp3.1\DAL.dll
-E:\Code\triplite\DTO\bin\Debug\netcoreapp3.1\DAL.pdb
-E:\Code\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csprojAssemblyReference.cache
-E:\Code\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.AssemblyInfoInputs.cache
-E:\Code\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.AssemblyInfo.cs
-E:\Code\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csproj.CoreCompileInputs.cache
-E:\Code\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csproj.CopyComplete
-E:\Code\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.dll
-E:\Code\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.pdb
-E:\Code\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.genruntimeconfig.cache
-=======
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.deps.json
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.runtimeconfig.json
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.runtimeconfig.dev.json
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.dll
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DTO.pdb
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DAL.dll
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\bin\Debug\netcoreapp3.1\DAL.pdb
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csprojAssemblyReference.cache
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.AssemblyInfoInputs.cache
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.AssemblyInfo.cs
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csproj.CoreCompileInputs.cache
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.csproj.CopyComplete
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.dll
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.pdb
-C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DTO\obj\Debug\netcoreapp3.1\DTO.genruntimeconfig.cache
->>>>>>> e7ee196050325be46e7fa88357c77a051b52e7fd

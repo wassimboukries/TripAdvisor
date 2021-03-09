@@ -56,6 +56,15 @@ namespace Front.Controllers
         {
             Location location = null;
             location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == locationid);
+            if (opinion.rateOpinion != 0)
+            {
+                double sum = opinion.rateOpinion;
+                foreach (Opinion element in location.opinionList)
+                {
+                    sum += element.rateOpinion;
+                }
+                location.rateLocation = sum / (location.opinionList.Count + 1);
+            }
             if (location == null)
             {
                 return NotFound();
