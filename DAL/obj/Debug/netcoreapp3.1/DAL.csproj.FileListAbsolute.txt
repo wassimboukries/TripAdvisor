@@ -61,3 +61,15 @@ C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DAL\obj\D
 C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
 C:\Users\lucas\Documents\ISIMA\2A\P2\service_web\trip_advisor\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache
 >>>>>>> e7ee196050325be46e7fa88357c77a051b52e7fd
+E:\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+E:\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.json
+E:\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.dev.json
+E:\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+E:\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
@@ -6,13 +5,4 @@
       "C:\\Users\\wassi\\.nuget\\packages"
     ]
   }
-=======
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\ASUS\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\ASUS\\.nuget\\packages"
-    ]
-  }
->>>>>>> ad41adc8506a1d93e0926daf27cafe63b3a14729
 }
