@@ -35,8 +35,8 @@
 .list {
     border: solid black 1px;
     width: 48%;
-    height: 85vh;
-    overflow: scroll;
+    height: 90vh;
+    overflow-y: scroll;
     border-radius: 5%;
 }
 
@@ -44,13 +44,11 @@ input {
     margin : 10px;
 }
 
-.details {
-}
-
 .locationDetails{
     border: solid black 1px;
     padding : 20px;
     width : 55%;
+    height : 90vh;
     display : flex;
     flex-direction : column;
 }
@@ -68,8 +66,25 @@ input {
     align-self: center;
 }
 
-#form {
+.inputOp {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+}
+
+.inputOp input {
+    width: 80%;
+}
+
+.opinion{
+    display : flex;
+    flex-direction: row;
+    justify-content : space-between;
+}
+
+
+.table tbdoy {
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }

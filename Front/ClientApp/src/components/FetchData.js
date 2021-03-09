@@ -14,7 +14,7 @@ export class FetchData extends Component {
 
     componentDidMount() {
         this.populateLocationData();
-        this.populateOpinionData();
+        //this.populateOpinionData();
     }
 
      renderForecastsTable(forecasts, clickeds) {
@@ -35,7 +35,7 @@ export class FetchData extends Component {
                     )}
                 </div>
                 {
-                    this.state.selectedLocation != null ? <Location element={this.state.selectedLocation} /> : null
+                    this.state.selectedLocation != null ? <Location key={this.state.selectedLocation.id} element={this.state.selectedLocation}/> : null
                 }
                 
             </div>
@@ -52,7 +52,6 @@ export class FetchData extends Component {
 
         return (
             <div>
-                <h1 id="tabelLabel" >Welcome to TripAdvisor !</h1>
                 {contents}
             </div>
         );
@@ -77,12 +76,6 @@ export class FetchData extends Component {
             temp.push(false);
 
         this.setState({ clickeds: temp });
-    }
-
-    async populateOpinionData() {
-        const response = await fetch('opinion');
-        const data = await response.json();
-        this.setState({ forecastOpinion: data, loading: false });
     }
 
     displayOpinions(forecast) {
