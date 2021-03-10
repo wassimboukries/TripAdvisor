@@ -18,6 +18,7 @@ namespace DTO
                 id = entity.id,
                 name = entity.name,
                 linkPicture = entity.linkPicture,
+                rateLocation = entity.rateLocation,
                 opinionList = listOfOpinionsDto
             };
         }
@@ -34,6 +35,7 @@ namespace DTO
                 id = dto.id,
                 name = dto.name,
                 linkPicture = dto.linkPicture,
+                rateLocation = dto.rateLocation,
                 opinionList = listOfOpinions
             };
         }
@@ -47,7 +49,7 @@ namespace DTO
             {
                 id = entity.id,
                 Content = entity.Content,
-                ClientID = entity.ClientID
+                rateOpinion = entity.rateOpinion
             };
         }
 
@@ -60,7 +62,7 @@ namespace DTO
             {
                 id = dto.id,
                 Content = dto.Content,
-                ClientID = dto.ClientID
+                rateOpinion = dto.rateOpinion
             };
         }
     }

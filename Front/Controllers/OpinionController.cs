@@ -4,6 +4,7 @@ using System.Linq;
 using DAL.Model;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Front.Controllers
 {
@@ -55,7 +56,16 @@ namespace Front.Controllers
         public ActionResult Post(int locationid, Opinion opinion)
         {
             Location location = null;
-            location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == locationid);
+            location = _TripAdvisorContext.Locations.Include(element => element.opinionList).SingleOrDefault(loc => loc.id == locationid);
+            if (opinion.rateOpinion != 0)
+            {
+                double sum = opinion.rateOpinion;
+                foreach (Opinion element in location.opinionList)
+                {
+                    sum += element.rateOpinion;
+                }
+                location.rateLocation = sum / (location.opinionList.Count + 1);
+            }
             if (location == null)
             {
                 return NotFound();

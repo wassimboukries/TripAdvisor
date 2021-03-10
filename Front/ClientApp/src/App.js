@@ -13,6 +13,7 @@ export default class App extends Component {
   render () {
     return (
         <Layout>
+            <script src='./components/rate.js'></script>
             <Route path='/' component={FetchData} />
       </Layout>
     );

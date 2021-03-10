@@ -32,6 +32,9 @@ namespace DAL.Migrations
                     b.Property<string>("name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("rateLocation")
+                        .HasColumnType("float");
+
                     b.HasKey("id");
 
                     b.ToTable("Location");
@@ -44,14 +47,14 @@ namespace DAL.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("ClientID")
-                        .HasColumnType("int");
-
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("Locationid")
                         .HasColumnType("int");
+
+                    b.Property<double>("rateOpinion")
+                        .HasColumnType("float");
 
                     b.HasKey("id");
 
@@ -63,13 +66,13 @@ namespace DAL.Migrations
             modelBuilder.Entity("DAL.Model.Opinion", b =>
                 {
                     b.HasOne("DAL.Model.Location", null)
-                        .WithMany("OpinionList")
+                        .WithMany("opinionList")
                         .HasForeignKey("Locationid");
                 });
 
             modelBuilder.Entity("DAL.Model.Location", b =>
                 {
-                    b.Navigation("OpinionList");
+                    b.Navigation("opinionList");
                 });
 #pragma warning restore 612, 618
         }

@@ -4,20 +4,22 @@ import { Location } from './Location';
 
 export class FetchData extends Component {
     static displayName = FetchData.name;
-
      
     constructor(props) {
         super(props);
         this.state = { forecasts: [], loading: true, weather: [], selectedLocation : null };
         this.displayOpinions = this.displayOpinions.bind(this);
+        
     }
 
     componentDidMount() {
         this.populateLocationData();
+
+        
         //this.populateOpinionData();
     }
 
-     renderForecastsTable(forecasts, clickeds) {
+     renderForecastsTable(forecasts) {
         return (
             <div className="corps" >
                 <div className="list">
@@ -27,6 +29,8 @@ export class FetchData extends Component {
                             <div className="card"  >
                                 <div><img src={forecast.linkPicture} alt="loading img" /></div>
                                 <h2 className="card-title"> {forecast.name} </h2>
+                                
+                                <div className="ratingHolder">{forecast.rateLocation} / 5</div>
                                 <div>{forecast.weather.main.temp}&#8451;</div>
                                 <div><button id={'avis-' + forecast.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(forecast)}>Savoir plus</button></div>
                             </div>
@@ -46,10 +50,9 @@ export class FetchData extends Component {
     render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : this.renderForecastsTable(this.state.forecasts, this.state.clickeds);
+            : this.renderForecastsTable(this.state.forecasts);
+           
             
-
-
         return (
             <div>
                 {contents}
