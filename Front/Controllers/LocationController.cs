@@ -23,7 +23,8 @@ namespace Front.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<LocationDto>> Get()
         {
-            return Ok(_TripAdvisorContext.Locations.Include(element => element.opinionList).Select(element => element.ToDto()));
+            IEnumerable<LocationDto> enumerable = _TripAdvisorContext.Locations.Include(element => element.opinionList).Select(element => element.ToDto());
+            return Ok(enumerable.OrderByDescending(x => x.rateLocation));
         }
 
         [HttpGet("{id}")]
@@ -39,7 +40,7 @@ namespace Front.Controllers
 
         }
 
-        [HttpPut("{id, linkPicture}")]
+        [HttpPut]
         public ActionResult Put(int id, String picture)
         {
             var location = _TripAdvisorContext.Locations.SingleOrDefault(loc => loc.id == id);

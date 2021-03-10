@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "react-bootstrap-validation": "^0.1.11",
+    "react-rating-stars-component": "^2.2.0",
+    "react-star-rating-component": "^1.4.1"
+  }
+}

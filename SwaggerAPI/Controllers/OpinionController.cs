@@ -39,7 +39,7 @@ namespace SwaggerAPI.Controllers
             
         }
 
-        [HttpPut("{id, content}")]
+        [HttpPut]
         public ActionResult Put(int id, String content)
         {
             var opinion = _TripAdvisorContext.Opinions.SingleOrDefault(opi => opi.id == id);

@@ -1,41 +1,45 @@
 import React, { Component } from 'react';
 import './FetchData.css';
 import { Location } from './Location';
+import StarRatingComponent from 'react-star-rating-component';
 
 export class FetchData extends Component {
     static displayName = FetchData.name;
-
      
     constructor(props) {
         super(props);
-        this.state = { forecasts: [], loading: true, weather: [], selectedLocation : null };
+        this.state = { Locations: [], loading: true, weather: [], selectedLocation : null };
         this.displayOpinions = this.displayOpinions.bind(this);
+        
     }
 
     componentDidMount() {
         this.populateLocationData();
-        this.populateOpinionData();
     }
 
-     renderForecastsTable(forecasts, clickeds) {
+     renderLocationsTable(Locations) {
         return (
             <div className="corps" >
                 <div className="list">
-                    {forecasts.map((forecast, index) =>
-                        <div key={forecast.id} >
+                    {Locations.map((Location, index) =>
+                        <div key={Location.id} >
 
                             <div className="card"  >
-                                <div><img src={forecast.linkPicture} alt="loading img" /></div>
-                                <h2 className="card-title"> {forecast.name} </h2>
-                                <div>{forecast.weather.main.temp}&#8451;</div>
-                                <div><button id={'avis-' + forecast.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(forecast)}>Savoir plus</button></div>
+                                <div><img src={Location.linkPicture} alt="loading img" /></div>
+                                <h2 className="card-title"> {Location.name} </h2>
+                                <StarRatingComponent
+                                    name="rate1"
+                                    starCount={5}
+                                    editing={false}
+                                    value={Location.rateLocation}
+                                />
+                                <div><button id={'avis-' + Location.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(Location)}>Savoir plus</button></div>
                             </div>
-                        
                         </div>
                     )}
                 </div>
                 {
-                    this.state.selectedLocation != null ? <Location element={this.state.selectedLocation} /> : null
+                    this.state.selectedLocation != null ? <Location key={this.state.selectedLocation.id} element={this.state.selectedLocation}/> : null
                 }
                 
             </div>
@@ -46,13 +50,11 @@ export class FetchData extends Component {
     render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : this.renderForecastsTable(this.state.forecasts, this.state.clickeds);
+            : this.renderLocationsTable(this.state.Locations);
+           
             
-
-
         return (
             <div>
-                <h1 id="tabelLabel" >Welcome to TripAdvisor !</h1>
                 {contents}
             </div>
         );
@@ -69,35 +71,18 @@ export class FetchData extends Component {
                 .then(dataw => elt.weather = dataw));
         });
         const result = await Promise.all(promises);
-        this.setState({ forecasts: data, loading: false });
-        console.log('forecast', this.state.forecasts);
+        this.setState({ Locations: data, loading: false });
+        console.log('Location', this.state.Locations);
 
         let temp = []
-        for (let i = 0; i < this.state.forecasts.length; ++i)
+        for (let i = 0; i < this.state.Locations.length; ++i)
             temp.push(false);
 
         this.setState({ clickeds: temp });
     }
 
-    async populateOpinionData() {
-        const response = await fetch('opinion');
-        const data = await response.json();
-        this.setState({ forecastOpinion: data, loading: false });
-    }
-
-    displayOpinions(forecast) {
-        console.log("ypppppppppppp");
-        this.setState({ selectedLocation: forecast });
+    displayOpinions(Location) {
+        console.log(Location.rateLocation);
+        this.setState({ selectedLocation: Location });
     }
 }
-
-/*{
-                                    (clickeds[index])?
-                                    <div>
-                                        <input type='text' placeholder='Taper votre commentaire' />
-                                        {forecast.opinionList.map(opinion =>
-                                            <div key={"opn-" + opinion.id} className="opinion">
-                                                <div>{opinion.clientID} : {opinion.content}</div>
-                                            </div>)}
-                                    </div> : null
-                            }*/
