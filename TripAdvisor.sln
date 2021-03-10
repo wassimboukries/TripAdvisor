@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Front", "Front\Front.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerAPI", "SwaggerAPI\SwaggerAPI.csproj", "{374669F3-A037-4C9B-B28B-60252878D8B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{28B1FE7C-6BF8-4C43-8713-C1477A011527}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO", "DTO\DTO.csproj", "{28B1FE7C-6BF8-4C43-8713-C1477A011527}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

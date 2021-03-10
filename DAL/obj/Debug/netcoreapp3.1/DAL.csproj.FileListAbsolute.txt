@@ -9,3 +9,4 @@ Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.dll
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
 Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache
+Y:\ISIMA 2020-2021\Services web\Projet\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
