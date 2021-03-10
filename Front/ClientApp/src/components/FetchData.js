@@ -10,7 +10,6 @@ export class FetchData extends Component {
         super(props);
         this.state = { Locations: [], loading: true, weather: [], selectedLocation : null };
         this.displayOpinions = this.displayOpinions.bind(this);
-        
     }
 
     componentDidMount() {

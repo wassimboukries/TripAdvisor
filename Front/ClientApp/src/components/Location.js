@@ -1,4 +1,5 @@
-﻿import React, { Component } from 'react';
+
+import React, { Component } from 'react';
 import './FetchData.css';
 import StarRatingComponent from 'react-star-rating-component';
 import Popover from 'react-bootstrap/Popover';
@@ -26,11 +27,23 @@ export class Location extends Component {
                 </Popover.Content>
             </Popover>
         };
+        this.buttonSubmit = React.createRef();
+        this.messageEnd = React.createRef();
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
 
 
+    }
+
+    componentDidMount() {
+        this.scrollToBottom()
+    }
+    componentDidUpdate() {
+        this.scrollToBottom()
+    }
+    scrollToBottom = () => {
+        this.messageEnd.current.scrollIntoView({ behavior: 'smooth' })
     }
 
     handleChange(event) {
@@ -60,6 +73,8 @@ export class Location extends Component {
             temp.push(op);
             this.setState({ locationOpinions: temp });
             this.setState({ newOpinion: '' });
+
+            this.buttonSubmit.current.click();
         }
         else {
             alert("Veuillez rentrer un message d'avis avant de submiter");
@@ -102,12 +117,13 @@ export class Location extends Component {
                             </div>
                             )
                     }
+                    <div ref={this.messageEnd}></div>
                 </div>
                 <div className="inputOp">
 
                     <input type='text' placeholder='Rédiger votre Avis' className="form-control" value={this.state.newOpinion} onChange={this.handleChange}/>
                     <OverlayTrigger trigger="click" placement="top" overlay={this.state.popover}>
-                        <Button variant="success" className="button-submit">Poster Avis</Button>
+                        <Button variant="success" ref={this.buttonSubmit}>Poster Avis</Button>
                     </OverlayTrigger>
 
                 </div>
