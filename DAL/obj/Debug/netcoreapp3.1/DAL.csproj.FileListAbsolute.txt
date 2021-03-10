@@ -3,6 +3,7 @@ E:\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.json
 E:\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.dev.json
 E:\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.dll
 E:\triplite\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
 E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
 E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
 E:\triplite\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
