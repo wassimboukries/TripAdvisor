@@ -47,7 +47,7 @@ input {
 .locationDetails{
     border: solid black 1px;
     padding : 20px;
-    width : 55%;
+    width : 52%;
     height : 90vh;
     display : flex;
     flex-direction : column;
@@ -76,15 +76,22 @@ input {
     width: 80%;
 }
 
-.opinion{
-    display : flex;
+.Opinions {
+    overflow-y: scroll;
+    height : 50%;
+}
+
+.opinion {
+    display: flex;
     flex-direction: row;
-    justify-content : space-between;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.05);
+    height: 35px;
+    padding: 10px;
 }
 
 
-.table tbdoy {
-    position: absolute;
-    overflow-y: scroll;
-    overflow-x: hidden;
+#opAvis{
+    width : 80%
 }

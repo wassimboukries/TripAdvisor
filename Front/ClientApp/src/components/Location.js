@@ -1,5 +1,24 @@
 ﻿import React, { Component } from 'react';
 import './FetchData.css';
+import StarRatingComponent from 'react-star-rating-component';
+import Popover from 'react-bootstrap/Popover';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import PopoverTitle from 'react-bootstrap/PopoverTitle';
+import Button from 'react-bootstrap/Button';
+
+
+const popover = (
+    <Popover id="popover-basic">
+        <Popover.Title as="h3">Merci donner une note</Popover.Title>
+        <Popover.Content>
+            <StarRatingComponent
+                name="rate2"
+                starCount={5}
+            />
+    </Popover.Content>
+    </Popover>
+);
+
 export class Location extends Component {
 
     
@@ -42,6 +61,10 @@ export class Location extends Component {
             this.setState({ forecastOpinions: temp });
             this.setState({ newOpinion: '' });
         }
+
+        let tooltip = document.querySelector('#sumbit');
+       
+     
     }
 
     render() {
@@ -50,6 +73,7 @@ export class Location extends Component {
                 <img src={this.props.element.linkPicture} alt="Location s image" />
                 <h1>{this.props.element.name}</h1>
 
+
                 <div className="rating">
               
                   
@@ -57,19 +81,28 @@ export class Location extends Component {
 
                 <h2>Avis : </h2>
 
-                {
-                            this.state.forecastOpinions.map((opinion, index) =>
-                                <div key={"opn" + index} className="opinion">
-                                    <div id="opAvis">{opinion.content}</div>
-                                    <div id="opRanking">{opinion.rateOpinion} / 5</div>
-                                </div>
+                <div className="Opinions">
+               
+                    {
+                        this.state.forecastOpinions.map((opinion, index) =>
+                            <div key={"opn" + index} className="opinion">
+                                <div id="opAvis"><p>{opinion.content}</p></div>
+                                <StarRatingComponent
+                                    name="rate1"
+                                    starCount={5}
+                                    editing={false}
+                                    value={opinion.rateOpinion}
+                                />
+                            </div>
                             )
-                        }
-
+                    }
+                </div>
                 <div className="inputOp">
 
                     <input type='text' placeholder='Rédiger votre Avis' className="form-control" value={this.state.newOpinion} onChange={this.handleChange} />
-                    <button type="button" className='btn btn-primary' onClick={event => this.handleSubmit(event, this.props.element.id)} >Poster Avis</button>
+                    <OverlayTrigger trigger="click" placement="top" overlay={popover}>
+                        <Button variant="success">Poster Avis</Button>
+                    </OverlayTrigger>
 
                 </div>
             </div>

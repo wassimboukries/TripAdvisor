@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './FetchData.css';
 import { Location } from './Location';
+import StarRatingComponent from 'react-star-rating-component';
 
 export class FetchData extends Component {
     static displayName = FetchData.name;
@@ -29,8 +30,15 @@ export class FetchData extends Component {
                             <div className="card"  >
                                 <div><img src={forecast.linkPicture} alt="loading img" /></div>
                                 <h2 className="card-title"> {forecast.name} </h2>
+
+
+                                <StarRatingComponent
+                                    name="rate1"
+                                    starCount={5}
+                                    editing={false}
+                                    value={forecast.rateLocation}
+                                />
                                 
-                                <div className="ratingHolder">{forecast.rateLocation} / 5</div>
                                 <div>{forecast.weather.main.temp}&#8451;</div>
                                 <div><button id={'avis-' + forecast.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(forecast)}>Savoir plus</button></div>
                             </div>
@@ -82,7 +90,7 @@ export class FetchData extends Component {
     }
 
     displayOpinions(forecast) {
-        console.log("ypppppppppppp");
+        console.log(forecast.rateLocation);
         this.setState({ selectedLocation: forecast });
     }
 }
