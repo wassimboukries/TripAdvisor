@@ -1,6 +1,6 @@
 ﻿body {
     resize: horizontal;
-    overflow: auto;
+    overflow : auto;
 }
 
 .container {
@@ -13,24 +13,24 @@
 
 .corps {
     display: flex;
-    flex-direction: row;
+    flex-direction : row;
 }
 
 .card {
     padding: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content : space-between;
     align-items: center;
     border-bottom: solid black 1px;
 }
 
-    .card img {
-        border-radius: 50%;
-        width: 100px;
-        width: 150px;
-        height: 150px;
-    }
+.card img{
+    border-radius : 50%;
+    width : 100px;
+    width : 150px;
+    height : 150px;
+}
 
 .list {
     border: solid black 1px;
@@ -40,8 +40,13 @@
     border-radius: 5%;
 }
 
-input {
-    margin: 10px;
+#rate-button{
+    display : flex;
+    flex-direction : row;
+}
+
+.btnAvis{
+    margin-left : 10px;
 }
 
 .locationDetails {
@@ -53,28 +58,47 @@ input {
     flex-direction: column;
 }
 
-    .locationDetails img {
-        align-self: center;
-        max-width: 400px;
-        max-height: 380px;
-        margin: 10px;
-        border-radius: 5%;
-    }
+.locationDetails img {
+    align-self : center;
+    max-width : 400px;
+    max-height : 380px;
+    margin : 10px;
 
-    .locationDetails h1 {
-        align-self: center;
-    }
+    border-radius : 5%;
+}
+
+.locationDetails h1 {
+    align-self: center;
+}
+
+.nameTemp{
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    justify-items:flex-end;
+    align-self : center;
+}
+
+
+.locationName{
+    margin-right : 10px;
+}
+
+
+.temp{
+    margin-left : 10px;
+}
 
 .inputOp {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top : 10px;
 }
 
-    .inputOp input {
-        width: 80%;
-    }
-
+.inputOp input {
+    width: 80%;
+}
 
 .Opinions {
     overflow-y: scroll;
@@ -86,8 +110,6 @@ input {
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.05);
-    margin-bottom: 10px;
     padding-left: 5px;
     padding-right: 5px;
 }

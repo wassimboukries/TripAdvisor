@@ -27,14 +27,19 @@ export class FetchData extends Component {
                             <div className="card"  >
                                 <div><img src={Location.linkPicture} alt="loading img" /></div>
                                 <h2 className="card-title"> {Location.name} </h2>
-                                <StarRatingComponent
-                                    name="rate1"
-                                    starCount={5}
-                                    editing={false}
-                                    value={Location.rateLocation}
-                                />
-                                <div><button id={'avis-' + Location.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(Location)}>Savoir plus</button></div>
+
+                                <div id="rate-button">
+                                    <StarRatingComponent
+                                        name="rate1"
+                                        starCount={5}
+                                        editing={false}
+                                        value={Location.rateLocation}
+                                    />
+                                    <div><button id={'avis-' + Location.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(Location)}>Savoir plus</button></div>
+                                </div>
+
                             </div>
+                        
                         </div>
                     )}
                 </div>
@@ -72,7 +77,7 @@ export class FetchData extends Component {
         });
         const result = await Promise.all(promises);
         this.setState({ Locations: data, loading: false });
-        console.log('Location', this.state.Locations);
+        
 
         let temp = []
         for (let i = 0; i < this.state.Locations.length; ++i)
@@ -82,7 +87,6 @@ export class FetchData extends Component {
     }
 
     displayOpinions(Location) {
-        console.log(Location.rateLocation);
         this.setState({ selectedLocation: Location });
     }
 }
