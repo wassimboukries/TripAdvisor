@@ -15,9 +15,6 @@ export class FetchData extends Component {
 
     componentDidMount() {
         this.populateLocationData();
-
-        
-        //this.populateOpinionData();
     }
 
      renderForecastsTable(forecasts) {
@@ -31,16 +28,16 @@ export class FetchData extends Component {
                                 <div><img src={forecast.linkPicture} alt="loading img" /></div>
                                 <h2 className="card-title"> {forecast.name} </h2>
 
+                                <div id="rate-button">
+                                    <StarRatingComponent
+                                        name="rate1"
+                                        starCount={5}
+                                        editing={false}
+                                        value={forecast.rateLocation}
+                                    />
+                                    <div><button id={'avis-' + forecast.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(forecast)}>Savoir plus</button></div>
+                                </div>
 
-                                <StarRatingComponent
-                                    name="rate1"
-                                    starCount={5}
-                                    editing={false}
-                                    value={forecast.rateLocation}
-                                />
-                                
-                                <div>{forecast.weather.main.temp}&#8451;</div>
-                                <div><button id={'avis-' + forecast.name} className="btn btn-primary btnAvis" onClick={() => this.displayOpinions(forecast)}>Savoir plus</button></div>
                             </div>
                         
                         </div>
@@ -80,7 +77,7 @@ export class FetchData extends Component {
         });
         const result = await Promise.all(promises);
         this.setState({ forecasts: data, loading: false });
-        console.log('forecast', this.state.forecasts);
+        
 
         let temp = []
         for (let i = 0; i < this.state.forecasts.length; ++i)
@@ -90,18 +87,6 @@ export class FetchData extends Component {
     }
 
     displayOpinions(forecast) {
-        console.log(forecast.rateLocation);
         this.setState({ selectedLocation: forecast });
     }
 }
-
-/*{
-                                    (clickeds[index])?
-                                    <div>
-                                        <input type='text' placeholder='Taper votre commentaire' />
-                                        {forecast.opinionList.map(opinion =>
-                                            <div key={"opn-" + opinion.id} className="opinion">
-                                                <div>{opinion.clientID} : {opinion.content}</div>
-                                            </div>)}
-                                    </div> : null
-                            }*/

@@ -23,7 +23,8 @@ namespace SwaggerAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<LocationDto>> Get()
         {
-            return Ok(_TripAdvisorContext.Locations.Include(element => element.opinionList).Select(element => element.ToDto()));
+            IEnumerable<LocationDto> enumerable = _TripAdvisorContext.Locations.Include(element => element.opinionList).Select(element => element.ToDto());
+            return Ok(enumerable.OrderByDescending(x => x.rateLocation));
         }
 
         [HttpGet("{id}")]

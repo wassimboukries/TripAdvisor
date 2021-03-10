@@ -40,17 +40,22 @@
     border-radius: 5%;
 }
 
-input {
-    margin : 10px;
+#rate-button{
+    display : flex;
+    flex-direction : row;
 }
 
-.locationDetails{
+.btnAvis{
+    margin-left : 10px;
+}
+
+.locationDetails {
     border: solid black 1px;
-    padding : 20px;
-    width : 52%;
-    height : 90vh;
-    display : flex;
-    flex-direction : column;
+    padding: 20px;
+    width: 52%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .locationDetails img {
@@ -66,10 +71,29 @@ input {
     align-self: center;
 }
 
+.nameTemp{
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    justify-items:flex-end;
+    align-self : center;
+}
+
+
+.locationName{
+    margin-right : 10px;
+}
+
+
+.temp{
+    margin-left : 10px;
+}
+
 .inputOp {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top : 10px;
 }
 
 .inputOp input {
@@ -86,12 +110,12 @@ input {
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.05);
-    height: 35px;
-    padding: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 
-#opAvis{
-    width : 80%
+#opAvis {
+    width: 80%;
+    word-wrap: break-word;
 }
